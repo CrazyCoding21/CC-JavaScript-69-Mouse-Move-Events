@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .video-box{
+    position: relative;
+    width: 50%;
+    height: 50vh;
+    filter: grayscale(0);
+    border: 3px solid #fff;
+}
+.container .video-box:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+}
+.container .video-box video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media only screen and (max-width: 535px) {
+    .container .video-box{
+        width: 100%;
+    }
+}
